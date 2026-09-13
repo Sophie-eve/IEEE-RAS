@@ -300,6 +300,34 @@ export const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <PathwayFinder />
       </section>
+
+      {/* ================= BOTTOM-RIGHT CORNER DEVELOPER ATTRIBUTION (HOME PAGE ONLY) ================= */}
+      <aside 
+        aria-label="Developer Credits"
+        className="fixed bottom-5 right-5 z-40 max-w-[290px] sm:max-w-xs"
+      >
+        <div className="bg-[#071329]/95 border border-cyan-500/40 rounded-2xl p-3 shadow-2xl shadow-cyan-950/80 backdrop-blur-md flex items-center gap-3 transition-all hover:border-cyan-400">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 p-[1.5px] shrink-0 shadow-md shadow-cyan-500/20">
+            <div className="w-full h-full bg-[#060c1c] rounded-xl flex items-center justify-center font-heading font-extrabold text-sm text-cyan-300">
+              SS
+            </div>
+          </div>
+          <div className="space-y-0.5 text-left min-w-0">
+            <div className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-[10px] font-code uppercase tracking-wider text-slate-400 font-medium">
+                Web Development Project
+              </span>
+            </div>
+            <p className="text-xs font-bold text-white font-heading truncate">
+              Designed & Developed by <span className="text-cyan-300">Shailja Singh</span>
+            </p>
+            <p className="text-[10px] text-slate-400 font-code truncate">
+              Dept. of Mechanical Engineering (E.V.)
+            </p>
+          </div>
+        </div>
+      </aside>
     </div>
   );
 };

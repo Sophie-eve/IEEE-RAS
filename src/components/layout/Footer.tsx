@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Shield, Cpu, Sparkles, GraduationCap, Award, CheckCircle2 } from 'lucide-react';
+import { ExternalLink, Shield, Cpu, Sparkles } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -188,59 +188,19 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* ================= STUDENT ASSIGNMENT SUBMISSION & DEVELOPER CREDITS BANNER ================= */}
-        <div className="mt-8 pt-6 pb-2 border-t border-slate-800">
-          <div className="tech-card rounded-2xl p-6 border border-cyan-500/30 bg-gradient-to-r from-[#071329] via-[#091834] to-[#071329] shadow-xl shadow-cyan-950/20 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4 text-left">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 p-[2px] shadow-lg shadow-cyan-500/20 shrink-0">
-                <div className="w-full h-full bg-[#060c1c] rounded-2xl flex items-center justify-center font-heading font-extrabold text-xl text-cyan-300">
-                  SS
-                </div>
-              </div>
-              <div className="space-y-1">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="font-code text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/40">
-                    Project Submission & Credits
-                  </span>
-                  <span className="font-code text-[11px] text-slate-400 flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-400" /> Verified Candidate
-                  </span>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-white font-heading">
-                  Designed & Developed by Shailja Singh
-                </h3>
-                <p className="text-xs sm:text-sm text-cyan-200/90 font-medium">
-                  Department of Mechanical Engineering (Electric Vehicles / E.V.)
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-3 text-xs font-code text-slate-300">
-              <div className="bg-slate-900/90 px-3.5 py-2 rounded-xl border border-slate-700/80 flex items-center gap-2">
-                <GraduationCap className="w-4 h-4 text-cyan-400" />
-                <span>Mechanical Engineering (E.V.)</span>
-              </div>
-              <div className="bg-slate-900/90 px-3.5 py-2 rounded-xl border border-slate-700/80 flex items-center gap-2">
-                <Award className="w-4 h-4 text-yellow-400" />
-                <span>IEEE RAS Web Assignment</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Bar & Disclaimer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-code text-slate-500">
           <div className="text-center sm:text-left space-y-0.5">
             <p>© {new Date().getFullYear()} IEEE Robotics and Automation Society (IEEE RAS). All rights reserved.</p>
             <p className="text-[11px] text-slate-600">
-              Submitted as a web development project by Shailja Singh, Department of Mechanical Engineering (E.V.).
+              Fostering the development and facilitating the exchange of scientific and technological knowledge in Robotics and Automation.
             </p>
           </div>
 
           <div className="flex items-center gap-4 text-[11px]">
             <span className="flex items-center gap-1 text-slate-400">
               <Shield className="w-3 h-3 text-emerald-400" />
-              IEEE Professional Quality Assured
+              IEEE Quality Assured
             </span>
           </div>
         </div>
