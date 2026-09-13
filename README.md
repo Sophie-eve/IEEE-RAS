@@ -62,7 +62,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open https://ieee-ras-three.vercel.app/ in your browser.
 
 ### Production Build & Preview
 
@@ -79,6 +79,5 @@ npm run preview
 ## 📋 Assignment Submission Credit
 
 - **Developer**: Shailja Singh
-- **Department**: Department of Mechanical Engineering (Electric Vehicles / E.V.)
+- **Department**: Department of Mechanical Engineering (Electric Vehicles-Electric vehicles.)
 - **Project**: IEEE Robotics and Automation Society Web Platform
-- **Repository**: [https://github.com/Sophie-eve/IEEE-RAS](https://github.com/Sophie-eve/IEEE-RAS)
