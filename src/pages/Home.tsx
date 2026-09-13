@@ -4,7 +4,6 @@ import { TECHNOLOGIES_DATA } from '../data/technologiesData';
 import { EVENTS_DATA } from '../data/eventsData';
 import { TechnologyCard } from '../components/cards/TechnologyCard';
 import { EventCard } from '../components/cards/EventCard';
-import { RobotArmCanvas } from '../components/interactive/RobotArmCanvas';
 import { CommunityNetwork } from '../components/interactive/CommunityNetwork';
 import { PathwayFinder } from '../components/interactive/PathwayFinder';
 import { 
@@ -36,70 +35,62 @@ export const Home: React.FC = () => {
         <div className="absolute inset-0 tech-grid-bg opacity-35 pointer-events-none" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-tr from-blue-700/15 to-cyan-500/10 blur-[130px] pointer-events-none rounded-full" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Headline & Value Proposition */}
-            <div className="lg:col-span-6 space-y-6">
-              {/* Technical Status Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 font-code text-xs text-slate-300 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                <span className="text-cyan-400 font-semibold tracking-wider uppercase">IEEE ROBOTICS & AUTOMATION SOCIETY</span>
-                <span className="text-slate-600">|</span>
-                <span className="text-slate-400">EST. 1984</span>
-              </div>
-
-              {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white font-heading tracking-tight leading-[1.1] text-glow-blue">
-                Advancing Robotics and Automation
-              </h1>
-
-              {/* Supporting Copy */}
-              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-sans max-w-xl">
-                The global scientific vanguard for embodied physical intelligence. IEEE RAS unites researchers, engineers, educators, and industry leaders to pioneer the theory, algorithmic foundations, and applied systems shaping autonomous machines.
-              </p>
-
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-cyan-400 text-slate-950 font-code text-xs sm:text-sm font-bold hover:bg-cyan-300 transition-all shadow-xl shadow-cyan-500/20 active:scale-95"
-                >
-                  <span>Explore IEEE RAS</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-
-                <Link
-                  to="/get-involved"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-200 font-code text-xs sm:text-sm font-semibold hover:bg-slate-800 hover:border-slate-500 transition-all active:scale-95"
-                >
-                  <Sparkles className="w-4 h-4 text-cyan-400" />
-                  <span>Get Involved</span>
-                </Link>
-              </div>
-
-              {/* Trust Indicators / Sub-metrics */}
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 text-slate-400 font-code text-xs">
-                <div>
-                  <span className="text-white font-bold text-lg font-heading block">180+</span>
-                  <span className="text-[11px] text-slate-500">Global Chapters</span>
-                </div>
-                <div>
-                  <span className="text-white font-bold text-lg font-heading block">35+</span>
-                  <span className="text-[11px] text-slate-500">Tech Committees</span>
-                </div>
-                <div>
-                  <span className="text-white font-bold text-lg font-heading block">4 Flagship</span>
-                  <span className="text-[11px] text-slate-500">Archival Journals</span>
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+          <div className="space-y-8">
+            {/* Technical Status Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 font-code text-xs text-slate-300 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+              <span className="text-cyan-400 font-semibold tracking-wider uppercase">IEEE ROBOTICS & AUTOMATION SOCIETY</span>
+              <span className="text-slate-600">|</span>
+              <span className="text-slate-400">EST. 1984</span>
             </div>
 
-            {/* Right Column: High-Tech Interactive Kinematics Simulator */}
-            <div className="lg:col-span-6">
-              <div className="relative">
-                {/* Glow surrounding canvas */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/30 to-cyan-500/20 rounded-3xl blur-xl opacity-75" />
-                <RobotArmCanvas />
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-extrabold text-white font-heading tracking-tight leading-[1.08] text-glow-blue">
+              Advancing Robotics and Automation
+            </h1>
+
+            {/* Supporting Copy */}
+            <p className="text-base sm:text-xl text-slate-300 leading-relaxed font-sans max-w-2xl mx-auto">
+              The global scientific vanguard for embodied physical intelligence. IEEE RAS unites researchers, engineers, educators, and industry leaders to pioneer the theory, algorithmic foundations, and applied systems shaping autonomous machines.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-cyan-400 text-slate-950 font-code text-xs sm:text-sm font-bold hover:bg-cyan-300 transition-all shadow-xl shadow-cyan-500/20 active:scale-95"
+              >
+                <span>Explore IEEE RAS</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+
+              <Link
+                to="/get-involved"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-200 font-code text-xs sm:text-sm font-semibold hover:bg-slate-800 hover:border-slate-500 transition-all active:scale-95"
+              >
+                <Sparkles className="w-4 h-4 text-cyan-400" />
+                <span>Get Involved</span>
+              </Link>
+            </div>
+
+            {/* Trust Indicators / Sub-metrics */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 border-t border-slate-800/80 text-slate-400 font-code text-xs max-w-3xl mx-auto">
+              <div>
+                <span className="text-white font-bold text-2xl font-heading block">180+</span>
+                <span className="text-xs text-slate-500">Global Chapters</span>
+              </div>
+              <div>
+                <span className="text-white font-bold text-2xl font-heading block">35+</span>
+                <span className="text-xs text-slate-500">Tech Committees</span>
+              </div>
+              <div>
+                <span className="text-white font-bold text-2xl font-heading block">4 Flagship</span>
+                <span className="text-xs text-slate-500">Archival Journals</span>
+              </div>
+              <div>
+                <span className="text-white font-bold text-2xl font-heading block">15,000+</span>
+                <span className="text-xs text-slate-500">Active Members</span>
               </div>
             </div>
           </div>

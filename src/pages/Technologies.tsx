@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { PageHeader } from '../components/layout/PageHeader';
 import { TECHNOLOGIES_DATA, Technology } from '../data/technologiesData';
 import { TechnologyCard } from '../components/cards/TechnologyCard';
-import { RobotArmCanvas } from '../components/interactive/RobotArmCanvas';
 import { 
   Bot, 
   Compass, 
@@ -173,45 +172,6 @@ export const Technologies: React.FC = () => {
                 <TechnologyCard tech={tech} />
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* ================= EMBEDDED REAL-TIME POINT-CLOUD PERCEPTION BENCHMARK ================= */}
-        <section className="space-y-6">
-          <div className="border-b border-slate-800 pb-4">
-            <span className="text-xs font-code text-cyan-400 uppercase tracking-wider block">INTERACTIVE KINEMATICS & MANIPULATOR DIGITAL TWIN</span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white font-heading">
-              Robotic Arm Kinematics & Workcell Simulation
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1">
-              Demonstrating the fundamental principles of forward and inverse kinematics (IK), Denavit-Hartenberg (D-H) modeling, and closed-loop trajectory tracking for high-precision industrial robotics.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8">
-              <RobotArmCanvas />
-            </div>
-
-            <div className="lg:col-span-4 space-y-4 text-xs font-code">
-              <div className="bg-[#070d1a] p-5 rounded-2xl border border-slate-800 space-y-3">
-                <span className="text-cyan-400 font-bold uppercase block text-sm">Inverse Kinematics Formulation</span>
-                <p className="text-slate-300 leading-relaxed font-sans text-xs">
-                  Target end-effector pose Te = [R | p] is mapped to joint configurations q = [q1 ... q6] via the manipulator Jacobian:
-                </p>
-                <div className="bg-slate-950 p-2.5 rounded font-code text-cyan-300 text-[11px] border border-slate-800">
-                  dx = J(q) · dq/dt<br/>
-                  dq = pinv(J) · dx + (I - pinv(J)·J) · grad(H)
-                </div>
-                <p className="text-slate-400 leading-relaxed font-sans text-xs">
-                  Null-space projection (I - pinv(J)·J) resolves kinematic redundancy while optimizing manipulability and avoiding joint velocity limits.
-                </p>
-              </div>
-
-              <div className="bg-blue-950/30 p-4 rounded-xl border border-blue-900/40 text-slate-300">
-                ⚙️ Core focus of the <strong className="text-white">IEEE RAS Robotics & Mechanisms Technical Committee</strong> and published across IEEE Transactions on Robotics (T-RO).
-              </div>
-            </div>
           </div>
         </section>
       </div>
