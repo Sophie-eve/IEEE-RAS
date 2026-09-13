@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ExternalLink, Shield, Cpu, Sparkles } from 'lucide-react';
 
 export const Footer: React.FC = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   return (
     <footer className="relative bg-[#03060f] border-t border-slate-800/80 pt-16 pb-12 overflow-hidden">
       {/* Background blueprint pattern */}
@@ -197,11 +199,24 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px]">
-            <span className="flex items-center gap-1 text-slate-400">
+          <div className="flex flex-col sm:flex-row items-center sm:items-end gap-3">
+            <span className="flex items-center gap-1 text-slate-400 text-[11px]">
               <Shield className="w-3 h-3 text-emerald-400" />
               IEEE Quality Assured
             </span>
+
+            {/* Developer Credit: Visible ONLY at the very end of the Home page in the right corner */}
+            {isHomePage && (
+              <div className="text-center sm:text-right bg-[#071329] border border-cyan-500/30 rounded-xl px-3 py-1.5 shadow-lg shadow-cyan-950/40 text-xs">
+                <span className="text-[10px] text-slate-400 uppercase tracking-wider block">Web Development Project</span>
+                <span className="text-white font-bold block text-[11px]">
+                  Designed & Developed by <span className="text-cyan-300">Shailja Singh</span>
+                </span>
+                <span className="text-[10px] text-slate-400 block">
+                  Dept. of Mechanical Engineering (E.V.)
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </div>
